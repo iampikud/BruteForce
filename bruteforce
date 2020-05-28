@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Script By Pikud
+
+#colors
+r="\033[91m"
+g="\033[92m"
+c="\033[36m"
+m="\033[7m"
+un="\033[4m"
+w="\033[0m"
+
+while :;
+do
+banner(){
+clear
+
+
+echo -e "
+
+$m _______________ $w
+$m|$c               $w$m|$w
+$m|$c               $w$m|$w$r we are not responsible $w
+$m|$c  Brute Force  $w$m|$w$r for the use of it $w
+$m|$c               $w$m|$w$r That said, have a $w
+$m|$c               $w$m|$w$r day of piracy. $w
+$m|$c               $w$m|$w \033[4m@iampikud$w
+$m _______________ $w
+"
+}
+banner
+read -p "start si/no: " s
+if [ $s = si ]; then
+time=0.5
+#tmux new-session -c -t "BruteForce"
+sleep $time
+tmux rename-window "tool by pikud"
+tmux split-window -v
+sleep $time
+tmux select-pane -t 1
+tmux send-keys "bash smtp/run" C-m
+banner
+elif [ $s = no ]; then
+	echo "bye.."
+	exit 0
+
+fi
+done
+
+
+
+
+
+
+
